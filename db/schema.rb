@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 20170719143838) do
   end
 
   create_table "topics", force: :cascade do |t|
-    t.string   "totle"
+    t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
