@@ -209,7 +209,9 @@ body {
 
 .tech-news {
   color: black;
-  margin: 20px;
+  margin: 10px;
+  border: 2px solid #049cdb;
+  border-radius: 5px;
 }
 
 .tech-news a {
@@ -218,4 +220,13 @@ body {
 
 .tech-news > .card{
   padding:30px;
+}
+
+.about {
+  color: black;
+}
+
+.about > .card {
+  padding: 40px;
+  top: 80px;
 }
