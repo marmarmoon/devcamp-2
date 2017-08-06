@@ -230,3 +230,12 @@ body {
   padding: 40px;
   top: 80px;
 }
+
+.app-card-container {
+  color: black;
+  text-align: left;
+}
+
+.app-card-container > .card {
+  padding: 40px;
+}
