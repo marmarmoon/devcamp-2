@@ -1,15 +1,82 @@
-<h1>About Me</h1>
+<div class="app-card-container">
+  <div class="card">
+    <h1>About Me</h1>
 
-<hr>
+    <hr>
 
-<div class="row"> 
-  <div class="col-md-4">
-    <%= image_tag "52365.jpg", width: 300, alt: "Profile Image" %>
-  </div>
-  
-  <div class="col-md-8">
-  <p>Hi! My name is Martina Martinez yes, before you ask, that is my birth given name. I am just starting to code so everything is new and exciting to me.I am a seventeen year old wannabe Software Developer, I guess you could say that in a couple months or so I can call myself a real developer but for now I'm a noobie at this.</p>
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag "DEV.jpg", width: 300, alt: "Profile Image" %>
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <div class="skill">
+              <h4><%= skill.title %></h4>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-warning"
+                  role="progressbar"
+                  aria-valuenow="<%= skill.percent_utilized %>"
+                  aria-valuemax="100"
+                  style="width: <%= skill.percent_utilized %>%"
+                ></div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      
+      <div class="col-md-8">
+        <p>Hi! My name is Martina Martinez yes, before you ask, that is my birth given name. I am just starting to code so everything is new and exciting to me. I am a seventeen year old wannabe Software Developer, I guess you could say that in a couple months or so I can call myself a real developer but for now I'm a noobie at this.</p>
 
-  <P>I like food, video games and learning new things aside from coding all day. I can't wait for you to learn more about me and the things I can do throughout this portfolio. </p>
+        <p>I like food, video games and learning new things aside from coding all day. I can't wait for you to learn more about me and the things I can do throughout this portfolio.</p>
+
+        <p>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#jobHistory"
+            aria-expanded="false"
+            aria-controler="jobHistory"
+          >
+            Job History
+          </button>
+
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#education"
+            aria-expanded="false"
+            aria-controler="education"
+          >
+            Education
+          </button>
+        </p>
+
+        <p>
+          <div class="collapse" id="jobHistory">
+            <div class="card card-block">
+              N/A
+            </div>
+            <div class="card card-block">
+              N/A
+            </div>
+          </div>
+
+          <div class="collapse" id="education">
+            <div class="card card-block">
+              West High
+            </div>
+            <div class="card card-block">
+              N/A
+            </div>
+            <div class="card card-block">
+              N/A
+            </div>
+          </div>
+        </p>
+      </div>
     </div>
+  </div>
 </div>
