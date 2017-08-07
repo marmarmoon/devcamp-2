@@ -223,11 +223,11 @@ body {
 
 .app-card-container {
   color: black;
-  text-align: middle;
+  text-align: left;
 }
 
 .app-card-container > .card {
-  padding: 25px;
+  padding: 40px;
 }
 
 .profile-img {
@@ -241,4 +241,9 @@ body {
 .card-block {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.skill {
+  margin-top: 9px;
+  margin-bottom: 9px;
 }
